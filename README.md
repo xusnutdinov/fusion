@@ -1,1 +1,5 @@
-# fusion-template
+# Адаптивная верстка сайта "Fusion"
+
+Адаптивная верстка сайта по готовому шаблону в формате PSD. В работе были использованы HTML, CSS, JavaScript.
+
+Посмотреть работу можно по ссылке: https://xusnutdinov.github.io/fusion/
