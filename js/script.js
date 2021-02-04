@@ -46,3 +46,46 @@ inputs.forEach(function(item) {
 		label.classList.add('focus');
 	});
 });
+
+
+let projectsSlider = new Swiper('.projects-slider', {
+	slidesPerView: 1,
+	spaceBetween: 170,
+	centeredSlides: true,
+	pagination: {
+		el: '.projects-slider-nav',
+		clickable: true,
+	},
+});
+
+let projectsImagesSlider = new Swiper('.projects-images__item', {
+	slidesPerView: 1,
+	spaceBetween: 140,
+	pagination: {
+		el: '.projects-images__slider-nav',
+		clickable: true,
+	},
+});
+
+
+
+
+const projectsViewBtn = document.querySelectorAll('[data-images]');
+const sliderProject = document.querySelector('.projects-slider');
+const projectsCloseBtn = document.querySelectorAll('.button--reverse');
+
+projectsViewBtn.forEach(function(item) {
+	item.addEventListener('click', function(event) {
+		let projectSlides = document.querySelector(item.getAttribute('data-images'));
+		projectSlides.classList.add('active');
+		sliderProject.classList.add('non-active');
+	});
+});
+
+projectsCloseBtn.forEach(function(item) {
+	item.addEventListener('click', function(event) {
+		let projectSlides = item.closest('.projects-images__item');
+		projectSlides.classList.remove('active');
+		sliderProject.classList.remove('non-active');
+	});
+});
